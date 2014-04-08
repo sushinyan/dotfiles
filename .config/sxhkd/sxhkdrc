@@ -37,6 +37,11 @@ super + {s,f}
 super + {t,m}
     bspc desktop -l {tiled,monocle}
 
+alt + grave
+    xdotool search --onlyvisible --classname scratchpad windowunmap \
+    || xdotool search --classname scratchpad windowmap \
+    || urxvt -name scratchpad -geometry 70x20 &
+
 #===============================================================================
 # wm independent hotkeys				    *misc*
 
